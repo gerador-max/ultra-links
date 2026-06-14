@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#6C63FF">
-    <meta name="description" content="Ultra Gerador de Links - Crie, encurte e gere QR Codes de forma rápida e profissional">
+    <meta name="description" content="Ultra Gerador de Links - Crie, encurte, gere QR Codes e Links WhatsApp de forma rápida e profissional">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Gerador Links">
     <link rel="manifest" href="/manifest.json">
-    <link rel="icon" type="image/png" href="/assets/icons/icon-192.png">
-    <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
+    <link rel="icon" type="image/png" href="/icon-192.png">
+    <link rel="apple-touch-icon" href="/icon-192.png">
     <title>Ultra Gerador de Links Profissional v3.0</title>
-    <link rel="stylesheet" href="./styles/themes.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="/themes.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/responsive.css">
 </head>
 <body data-theme="dark">
     <div id="app-container">
@@ -39,6 +39,10 @@
                     <span class="nav-icon">📱</span>
                     <span class="nav-text">QR Code</span>
                 </button>
+                <button id="btn-whatsapp" data-section="whatsapp">
+                    <span class="nav-icon">💬</span>
+                    <span class="nav-text">WhatsApp</span>
+                </button>
                 <button id="btn-historico" data-section="historico">
                     <span class="nav-icon">📋</span>
                     <span class="nav-text">Histórico</span>
@@ -47,6 +51,7 @@
         </header>
 
         <main id="content-area">
+            <!-- Seção Gerador de Links -->
             <section id="section-gerador" class="section active">
                 <div class="section-header">
                     <h2>🔗 Gerador de Links com Parâmetros</h2>
@@ -76,6 +81,7 @@
                 </div>
             </section>
 
+            <!-- Seção Encurtador -->
             <section id="section-encurtador" class="section">
                 <div class="section-header">
                     <h2>✂️ Encurtador de URLs</h2>
@@ -118,6 +124,7 @@
                 </div>
             </section>
 
+            <!-- Seção QR Code -->
             <section id="section-qrcode" class="section">
                 <div class="section-header">
                     <h2>📱 Gerador de QR Code</h2>
@@ -152,6 +159,85 @@
                 </div>
             </section>
 
+            <!-- Seção WhatsApp -->
+            <section id="section-whatsapp" class="section">
+                <div class="section-header">
+                    <h2>💬 Gerador de Link WhatsApp</h2>
+                    <p>Crie links diretos para conversas no WhatsApp com mensagem personalizada</p>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp-country">🌍 País</label>
+                    <select id="whatsapp-country">
+                        <option value="55" selected>🇧🇷 Brasil (+55)</option>
+                        <option value="1">🇺🇸 EUA/Canadá (+1)</option>
+                        <option value="351">🇵🇹 Portugal (+351)</option>
+                        <option value="34">🇪🇸 Espanha (+34)</option>
+                        <option value="54">🇦🇷 Argentina (+54)</option>
+                        <option value="56">🇨🇱 Chile (+56)</option>
+                        <option value="57">🇨🇴 Colômbia (+57)</option>
+                        <option value="52">🇲🇽 México (+52)</option>
+                        <option value="44">🇬🇧 Reino Unido (+44)</option>
+                        <option value="49">🇩🇪 Alemanha (+49)</option>
+                        <option value="33">🇫🇷 França (+33)</option>
+                        <option value="39">🇮🇹 Itália (+39)</option>
+                        <option value="81">🇯🇵 Japão (+81)</option>
+                        <option value="86">🇨🇳 China (+86)</option>
+                        <option value="91">🇮🇳 Índia (+91)</option>
+                        <option value="7">🇷🇺 Rússia (+7)</option>
+                        <option value="61">🇦🇺 Austrália (+61)</option>
+                        <option value="971">🇦🇪 Emirados Árabes (+971)</option>
+                        <option value="972">🇮🇱 Israel (+972)</option>
+                        <option value="27">🇿🇦 África do Sul (+27)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp-phone">📱 Número de Telefone</label>
+                    <input type="tel" id="whatsapp-phone" placeholder="(11) 99999-9999" autocomplete="off">
+                    <span class="input-help" id="whatsapp-mask-info">Formato: (00) 00000-0000 (11 dígitos)</span>
+                </div>
+                <div class="form-group">
+                    <label for="whatsapp-message">💬 Mensagem (opcional)</label>
+                    <textarea id="whatsapp-message" rows="4" placeholder="Digite sua mensagem personalizada..." maxlength="4096"></textarea>
+                    <div class="message-counter">
+                        <span id="whatsapp-char-count">0</span>/4096 caracteres
+                    </div>
+                </div>
+                <div id="whatsapp-templates-section">
+                    <label>📝 Templates Rápidos</label>
+                    <div id="whatsapp-templates-list">
+                        <button class="btn-small template-btn" data-message="Olá! Tudo bem? Vi seu contato e gostaria de conversar.">👋 Saudação</button>
+                        <button class="btn-small template-btn" data-message="Olá! Gostaria de solicitar um orçamento. Pode me ajudar?">💼 Orçamento</button>
+                        <button class="btn-small template-btn" data-message="Olá! Gostaria de agendar um horário. Qual disponibilidade?">📅 Agendamento</button>
+                        <button class="btn-small template-btn" data-message="Olá! Estou com um problema. Pode me ajudar?">🔧 Suporte</button>
+                        <button class="btn-small template-btn" data-message="Olá! Apenas confirmando para amanhã. Está tudo certo?">✅ Confirmação</button>
+                        <button class="btn-small template-btn" data-message="Olá! Gostaria de te convidar para um evento especial!">🎉 Convite</button>
+                        <button class="btn-small template-btn" data-message="Olá! Muito obrigado! Foi muito especial!">🙏 Agradecimento</button>
+                        <button class="btn-small template-btn" data-message="🔥 Promoção imperdível! Aproveite!">📢 Promoção</button>
+                    </div>
+                </div>
+                <button id="whatsapp-generate" class="btn-primary">
+                    <span>💬</span> Gerar Link WhatsApp
+                </button>
+                <div id="whatsapp-result" style="display:none;">
+                    <div class="form-group">
+                        <label>✅ Link WhatsApp Gerado</label>
+                        <div class="input-with-button">
+                            <input type="text" id="whatsapp-link" readonly>
+                            <button id="whatsapp-copy-result" class="btn-copy">📋 Copiar</button>
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:10px;margin-top:10px;">
+                        <button id="whatsapp-open" class="btn-success" style="flex:1;">
+                            <span>💬</span> Abrir Conversa
+                        </button>
+                        <button id="whatsapp-web" class="btn-secondary" style="flex:1;">
+                            <span>🖥️</span> WhatsApp Web
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Histórico -->
             <section id="section-historico" class="section">
                 <div class="section-header">
                     <h2>📋 Histórico de Links</h2>
@@ -179,14 +265,14 @@
 
     <div id="toast-container"></div>
 
-    <script src="./scripts/utils.js"></script>
-    <script src="./scripts/validator.js"></script>
-    <script src="./scripts/generator.js"></script>
-    <script src="./scripts/shortener.js"></script>
-    <script src="./scripts/qrcode.js"></script>
-    <script src="./scripts/history.js"></script>
-    <script src="./scripts/clipboard.js"></script>
-    <script src="./scripts/whatsapp.js"></script>>
-    <script src="./scripts/app.js"></script>
+    <script src="/utils.js"></script>
+    <script src="/validator.js"></script>
+    <script src="/generator.js"></script>
+    <script src="/shortener.js"></script>
+    <script src="/qrcode.js"></script>
+    <script src="/whatsapp.js"></script>
+    <script src="/history.js"></script>
+    <script src="/clipboard.js"></script>
+    <script src="/app.js"></script>
 </body>
 </html>
