@@ -1,0 +1,964 @@
+/* responsive.css - Sistema Responsivo Completo */
+/* Versão 3.0 - Design Responsivo Profissional */
+
+/* ============ BREAKPOINTS ============ */
+/* Mobile Pequeno: 320px - 374px */
+/* Mobile Médio: 375px - 424px */
+/* Mobile Grande: 425px - 575px */
+/* Tablet Pequeno: 576px - 767px */
+/* Tablet: 768px - 991px */
+/* Desktop Pequeno: 992px - 1199px */
+/* Desktop: 1200px - 1399px */
+/* Desktop Grande: 1400px+ */
+
+/* ============ MOBILE PEQUENO (320px - 374px) ============ */
+@media (max-width: 374px) {
+    #app-container {
+        padding: 8px;
+    }
+    
+    #main-header {
+        padding: 15px 0;
+        margin-bottom: 15px;
+    }
+    
+    #main-header h1 {
+        font-size: 1.3em;
+        letter-spacing: 0;
+    }
+    
+    #header-top {
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+    
+    #theme-toggle {
+        width: 35px;
+        height: 35px;
+        font-size: 1em;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    
+    #main-nav {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    #main-nav button {
+        width: 100%;
+        padding: 8px 12px;
+        font-size: 0.8em;
+        border-radius: 20px;
+        justify-content: center;
+    }
+    
+    .nav-text {
+        display: inline;
+        font-size: 0.85em;
+    }
+    
+    .nav-icon {
+        font-size: 1em;
+    }
+    
+    .section-header {
+        margin-bottom: 15px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.1em;
+    }
+    
+    .section-header p {
+        font-size: 0.75em;
+    }
+    
+    .form-group {
+        margin-bottom: 12px;
+    }
+    
+    .form-group label {
+        font-size: 0.7em;
+        letter-spacing: 1px;
+        margin-bottom: 6px;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 10px 12px;
+        font-size: 0.85em;
+        border-radius: var(--radius-sm);
+    }
+    
+    button {
+        padding: 10px 16px;
+        font-size: 0.8em;
+        border-radius: 20px;
+    }
+    
+    .param-inputs {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .param-field {
+        width: 100%;
+    }
+    
+    .param-field label {
+        font-size: 0.65em;
+    }
+    
+    .param-field input {
+        padding: 8px 10px;
+        font-size: 0.8em;
+    }
+    
+    .remove-param {
+        width: 30px;
+        height: 30px;
+        font-size: 1em;
+        align-self: flex-end;
+    }
+    
+    .input-with-button {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .input-with-button input {
+        width: 100%;
+    }
+    
+    .input-with-button button {
+        width: 100%;
+    }
+    
+    .preview-box {
+        padding: 10px;
+    }
+    
+    .preview-url {
+        font-size: 0.75em;
+        padding: 8px;
+    }
+    
+    .preview-actions {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    .preview-actions button {
+        width: 100%;
+        font-size: 0.75em;
+        padding: 8px;
+    }
+    
+    .param-tag {
+        font-size: 0.7em;
+        padding: 3px 8px;
+    }
+    
+    .stats-box {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+    
+    .stat-item {
+        padding: 8px;
+    }
+    
+    .stat-item span:last-child {
+        font-size: 0.95em;
+    }
+    
+    .qr-options {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .qr-canvas-wrapper {
+        padding: 10px;
+    }
+    
+    #qrcode-display canvas {
+        max-width: 200px;
+    }
+    
+    #history-actions {
+        flex-direction: column;
+        gap: 6px;
+    }
+    
+    #history-actions button {
+        width: 100%;
+        padding: 8px;
+        font-size: 0.8em;
+    }
+    
+    .history-item {
+        padding: 12px;
+        margin-bottom: 8px;
+    }
+    
+    .history-item-header {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    
+    .history-type-icon {
+        font-size: 1em;
+    }
+    
+    .history-type {
+        font-size: 0.7em;
+    }
+    
+    .history-time {
+        font-size: 0.7em;
+        width: 100%;
+    }
+    
+    .history-item-body label {
+        font-size: 0.65em;
+    }
+    
+    .history-item-body span {
+        font-size: 0.8em;
+    }
+    
+    .history-item-actions {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    
+    .history-item-actions button {
+        padding: 6px 10px;
+        font-size: 0.75em;
+        flex: 1;
+        min-width: 50px;
+    }
+    
+    .history-tags {
+        gap: 4px;
+        margin-top: 8px;
+    }
+    
+    .tag {
+        font-size: 0.65em;
+        padding: 2px 6px;
+    }
+    
+    #toast-container {
+        bottom: 10px;
+        right: 8px;
+        left: 8px;
+        gap: 6px;
+    }
+    
+    .toast {
+        padding: 10px 14px;
+        font-size: 0.8em;
+        border-radius: 20px;
+        min-width: auto;
+        max-width: 100%;
+    }
+    
+    .toast-icon {
+        font-size: 1em;
+    }
+    
+    .toast-close {
+        font-size: 1em;
+    }
+    
+    #main-footer {
+        padding: 15px 0 10px;
+        font-size: 0.75em;
+    }
+    
+    .history-stats-bar {
+        flex-direction: column;
+        gap: 4px;
+        font-size: 0.75em;
+        padding: 8px 10px;
+    }
+    
+    .suggestions-dropdown {
+        max-height: 150px;
+    }
+    
+    .suggestion-item {
+        padding: 8px 10px;
+    }
+    
+    .suggestion-item strong {
+        font-size: 0.8em;
+    }
+    
+    .suggestion-item small {
+        font-size: 0.7em;
+    }
+}
+
+/* ============ MOBILE MÉDIO (375px - 424px) ============ */
+@media (min-width: 375px) and (max-width: 424px) {
+    #app-container {
+        padding: 10px;
+    }
+    
+    #main-header h1 {
+        font-size: 1.5em;
+    }
+    
+    #main-nav {
+        gap: 6px;
+    }
+    
+    #main-nav button {
+        padding: 10px 14px;
+        font-size: 0.82em;
+    }
+    
+    .section-header h2 {
+        font-size: 1.2em;
+    }
+    
+    .param-inputs {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .remove-param {
+        align-self: flex-end;
+        width: 32px;
+        height: 32px;
+    }
+    
+    .input-with-button {
+        flex-direction: column;
+    }
+    
+    .stats-box {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+    
+    .qr-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .history-item-actions button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+    
+    #toast-container {
+        bottom: 12px;
+        right: 10px;
+        left: 10px;
+    }
+}
+
+/* ============ MOBILE GRANDE (425px - 575px) ============ */
+@media (min-width: 425px) and (max-width: 575px) {
+    #app-container {
+        padding: 12px;
+    }
+    
+    #main-header h1 {
+        font-size: 1.7em;
+    }
+    
+    #main-nav button {
+        padding: 10px 16px;
+        font-size: 0.85em;
+    }
+    
+    .param-inputs {
+        gap: 10px;
+    }
+    
+    .qr-options {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    #history-actions {
+        flex-direction: row;
+    }
+    
+    #toast-container {
+        bottom: 15px;
+        right: 12px;
+        left: auto;
+        max-width: 350px;
+    }
+}
+
+/* ============ TABLET PEQUENO (576px - 767px) ============ */
+@media (min-width: 576px) and (max-width: 767px) {
+    #app-container {
+        padding: 15px;
+    }
+    
+    #main-header h1 {
+        font-size: 1.9em;
+    }
+    
+    #main-nav {
+        gap: 8px;
+    }
+    
+    #main-nav button {
+        padding: 11px 20px;
+        font-size: 0.88em;
+    }
+    
+    .section-header h2 {
+        font-size: 1.4em;
+    }
+    
+    .param-inputs {
+        gap: 12px;
+    }
+    
+    .qr-options {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+    
+    .stats-box {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    
+    #history-actions {
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    .history-item-actions button {
+        padding: 7px 14px;
+    }
+    
+    #toast-container {
+        bottom: 20px;
+        right: 15px;
+    }
+    
+    .toast {
+        min-width: 280px;
+    }
+}
+
+/* ============ TABLET (768px - 991px) ============ */
+@media (min-width: 768px) and (max-width: 991px) {
+    #app-container {
+        padding: 18px;
+        max-width: 90%;
+    }
+    
+    #main-header h1 {
+        font-size: 2.1em;
+    }
+    
+    #main-nav {
+        gap: 10px;
+    }
+    
+    #main-nav button {
+        padding: 12px 22px;
+        font-size: 0.9em;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6em;
+    }
+    
+    .qr-options {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    
+    .stats-box {
+        gap: 12px;
+    }
+    
+    #toast-container {
+        bottom: 22px;
+        right: 18px;
+    }
+}
+
+/* ============ DESKTOP PEQUENO (992px - 1199px) ============ */
+@media (min-width: 992px) and (max-width: 1199px) {
+    #app-container {
+        max-width: 850px;
+        padding: 20px;
+    }
+    
+    #main-header h1 {
+        font-size: 2.3em;
+    }
+    
+    #main-nav button {
+        padding: 13px 25px;
+        font-size: 0.93em;
+    }
+    
+    .section-header h2 {
+        font-size: 1.7em;
+    }
+    
+    .qr-options {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ============ DESKTOP (1200px - 1399px) ============ */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    #app-container {
+        max-width: 900px;
+    }
+    
+    #main-header h1 {
+        font-size: 2.5em;
+    }
+}
+
+/* ============ DESKTOP GRANDE (1400px+) ============ */
+@media (min-width: 1400px) {
+    #app-container {
+        max-width: 950px;
+    }
+    
+    #main-header h1 {
+        font-size: 2.8em;
+    }
+    
+    #main-nav button {
+        padding: 15px 30px;
+        font-size: 1em;
+    }
+    
+    .section-header h2 {
+        font-size: 2em;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 16px 20px;
+        font-size: 1.05em;
+    }
+    
+    button {
+        padding: 16px 32px;
+        font-size: 1em;
+    }
+    
+    .history-item {
+        padding: 22px;
+    }
+}
+
+/* ============ ORIENTAÇÃO PAISAGEM (MOBILE) ============ */
+@media (max-width: 900px) and (orientation: landscape) {
+    #app-container {
+        padding: 10px 15px;
+    }
+    
+    #main-header {
+        padding: 15px 0;
+        margin-bottom: 15px;
+    }
+    
+    #main-header h1 {
+        font-size: 1.4em;
+    }
+    
+    #main-nav {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    #main-nav button {
+        flex-shrink: 0;
+        padding: 8px 14px;
+        font-size: 0.8em;
+        white-space: nowrap;
+    }
+    
+    .section {
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+    
+    #toast-container {
+        bottom: 8px;
+        right: 8px;
+    }
+    
+    .toast {
+        padding: 8px 14px;
+        font-size: 0.8em;
+    }
+}
+
+/* ============ ORIENTAÇÃO RETRATO (TABLET) ============ */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    #app-container {
+        max-width: 95%;
+    }
+    
+    .param-inputs {
+        gap: 12px;
+    }
+}
+
+/* ============ TELAS DE ALTA DENSIDADE (RETINA) ============ */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .qr-canvas-wrapper canvas {
+        image-rendering: auto;
+    }
+    
+    input,
+    button {
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+/* ============ DISPOSITIVOS COM NOTCH ============ */
+@supports (padding: env(safe-area-inset-top)) {
+    #app-container {
+        padding-top: calc(20px + env(safe-area-inset-top));
+        padding-bottom: calc(20px + env(safe-area-inset-bottom));
+        padding-left: calc(20px + env(safe-area-inset-left));
+        padding-right: calc(20px + env(safe-area-inset-right));
+    }
+    
+    #toast-container {
+        bottom: calc(25px + env(safe-area-inset-bottom));
+        right: calc(25px + env(safe-area-inset-right));
+    }
+}
+
+/* ============ DISPOSITIVOS DOBRÁVEIS ============ */
+@media (max-width: 700px) and (max-height: 500px) {
+    #main-header {
+        padding: 10px 0;
+        margin-bottom: 10px;
+    }
+    
+    #main-header h1 {
+        font-size: 1.2em;
+        margin-bottom: 0;
+    }
+    
+    #main-nav {
+        margin-bottom: 0;
+    }
+    
+    .section-header {
+        margin-bottom: 10px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.1em;
+        margin-bottom: 2px;
+    }
+    
+    .section-header p {
+        display: none;
+    }
+    
+    .form-group {
+        margin-bottom: 10px;
+    }
+    
+    .qr-canvas-wrapper canvas {
+        max-width: 150px;
+    }
+}
+
+/* ============ MODO JANELA (DESKTOP) ============ */
+@media (min-width: 768px) and (display-mode: standalone) {
+    #app-container {
+        padding-top: 30px;
+    }
+}
+
+/* ============ IMPRESSÃO ============ */
+@media print {
+    #app-container {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    #main-header,
+    #main-nav,
+    #theme-toggle,
+    #main-footer,
+    #toast-container,
+    button,
+    .history-item-actions,
+    .preview-actions,
+    #add-param,
+    .remove-param {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+    }
+    
+    .section {
+        display: block !important;
+        page-break-inside: avoid;
+    }
+    
+    .history-item {
+        border: 1px solid #ccc !important;
+        background: white !important;
+        color: black !important;
+        break-inside: avoid;
+    }
+    
+    .qr-canvas-wrapper {
+        box-shadow: none !important;
+        border: 2px solid #000 !important;
+    }
+    
+    .form-group input {
+        border: 1px solid #ccc !important;
+        background: white !important;
+        color: black !important;
+    }
+    
+    a {
+        color: blue !important;
+        text-decoration: underline !important;
+    }
+}
+
+/* ============ ALTO CONTRASTE ============ */
+@media (prefers-contrast: high) {
+    .form-group input,
+    .form-group select {
+        border-width: 3px;
+    }
+    
+    button {
+        border: 2px solid currentColor;
+    }
+    
+    .history-item {
+        border-width: 2px;
+    }
+    
+    .qr-canvas-wrapper {
+        border: 3px solid currentColor;
+    }
+}
+
+/* ============ MODO ESCURO DO SISTEMA ============ */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+        color-scheme: dark;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root:not([data-theme]) {
+        color-scheme: light;
+    }
+}
+
+/* ============ REDUZIR MOVIMENTO ============ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .history-item:hover {
+        transform: none !important;
+    }
+    
+    button:hover {
+        transform: none !important;
+    }
+}
+
+/* ============ DISPOSITIVOS COM MOUSE PRECISO ============ */
+@media (hover: hover) and (pointer: fine) {
+    .history-item {
+        cursor: pointer;
+    }
+    
+    .history-item:hover {
+        transform: translateX(4px);
+    }
+    
+    button:hover {
+        transform: translateY(-2px);
+    }
+    
+    .param-tag:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* ============ DISPOSITIVOS COM TOUCH ============ */
+@media (hover: none) and (pointer: coarse) {
+    button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    .history-item-actions button {
+        min-height: 40px;
+        min-width: 40px;
+        padding: 8px 12px;
+    }
+    
+    input[type="text"],
+    input[type="url"],
+    input[type="email"],
+    select {
+        min-height: 44px;
+    }
+    
+    .remove-param {
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    .toast-close {
+        min-width: 40px;
+        min-height: 40px;
+    }
+}
+
+/* ============ UTILITÁRIOS RESPONSIVOS ============ */
+.hide-mobile {
+    display: block;
+}
+
+.hide-desktop {
+    display: none;
+}
+
+.show-mobile {
+    display: none;
+}
+
+.show-desktop {
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .hide-mobile {
+        display: none !important;
+    }
+    
+    .hide-desktop {
+        display: block !important;
+    }
+    
+    .show-mobile {
+        display: block !important;
+    }
+    
+    .show-desktop {
+        display: none !important;
+    }
+}
+
+/* ============ CONTAINER FLUID ============ */
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* ============ GRID RESPONSIVO ============ */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.col {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 10px;
+}
+
+.col-4 {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    padding: 0 10px;
+}
+
+.col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 10px;
+}
+
+@media (max-width: 767px) {
+    .col-6,
+    .col-4,
+    .col-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* ============ VISIBILIDADE ============ */
+.visible-xs { display: none; }
+.visible-sm { display: none; }
+.visible-md { display: none; }
+.visible-lg { display: none; }
+
+@media (max-width: 575px) {
+    .visible-xs { display: block !important; }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .visible-sm { display: block !important; }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .visible-md { display: block !important; }
+}
+
+@media (min-width: 992px) {
+    .visible-lg { display: block !important; }
+}

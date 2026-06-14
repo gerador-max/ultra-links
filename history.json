@@ -1,0 +1,202 @@
+{
+  "version": "3.0",
+  "appName": "Ultra Gerador de Links",
+  "created": "2026-06-14T00:00:00.000Z",
+  "settings": {
+    "maxItems": 500,
+    "maxItemsPerType": 100,
+    "autoSaveInterval": 5000,
+    "maxStorageSize": 5242880,
+    "enableAutoClean": true,
+    "autoCleanDays": 30,
+    "enableBackup": true,
+    "enableSync": false,
+    "enableAnalytics": true
+  },
+  "items": [
+    {
+      "id": "demo-001-gerador",
+      "type": "gerador",
+      "original": "https://exemplo.com/landing-page",
+      "generated": "https://exemplo.com/landing-page?utm_source=facebook&utm_medium=social&utm_campaign=promo_verao",
+      "shortCode": null,
+      "params": [
+        {
+          "key": "utm_source",
+          "value": "facebook"
+        },
+        {
+          "key": "utm_medium",
+          "value": "social"
+        },
+        {
+          "key": "utm_campaign",
+          "value": "promo_verao"
+        }
+      ],
+      "size": null,
+      "timestamp": "2026-06-14T10:30:00.000Z",
+      "date": "2026-06-14T10:30:00.000Z",
+      "metadata": {
+        "browser": "Chrome",
+        "platform": "Android",
+        "screenSize": "412x915"
+      },
+      "tags": ["marketing", "utm", "facebook"],
+      "favorite": true,
+      "archived": false,
+      "count": 3,
+      "lastAccessed": "2026-06-14T12:00:00.000Z"
+    },
+    {
+      "id": "demo-002-encurtador",
+      "type": "encurtador",
+      "original": "https://docs.google.com/document/d/1234567890abcdefghijklmnopqrstuvwxyz/edit?usp=sharing",
+      "generated": "https://cur.to/abc123",
+      "shortCode": "abc123",
+      "params": [],
+      "size": null,
+      "timestamp": "2026-06-13T15:45:00.000Z",
+      "date": "2026-06-13T15:45:00.000Z",
+      "metadata": {
+        "browser": "Firefox",
+        "platform": "Windows",
+        "screenSize": "1920x1080"
+      },
+      "tags": ["documento", "compartilhar"],
+      "favorite": false,
+      "archived": false,
+      "count": 1,
+      "lastAccessed": "2026-06-13T16:20:00.000Z"
+    },
+    {
+      "id": "demo-003-qrcode",
+      "type": "qrcode",
+      "original": "https://meusite.com/promocao",
+      "generated": "QR Code gerado",
+      "shortCode": null,
+      "params": [],
+      "size": 300,
+      "timestamp": "2026-06-12T09:15:00.000Z",
+      "date": "2026-06-12T09:15:00.000Z",
+      "metadata": {
+        "browser": "Safari",
+        "platform": "iOS",
+        "screenSize": "390x844",
+        "qrColor": "#000000",
+        "qrBackground": "#FFFFFF",
+        "qrSize": 300
+      },
+      "tags": ["qr", "promocao"],
+      "favorite": true,
+      "archived": false,
+      "count": 2,
+      "lastAccessed": "2026-06-14T08:00:00.000Z"
+    },
+    {
+      "id": "demo-004-gerador",
+      "type": "gerador",
+      "original": "https://loja.com/produtos",
+      "generated": "https://loja.com/produtos?utm_source=instagram&utm_medium=stories&utm_campaign=lancamento&ref=influencer_01",
+      "shortCode": null,
+      "params": [
+        {
+          "key": "utm_source",
+          "value": "instagram"
+        },
+        {
+          "key": "utm_medium",
+          "value": "stories"
+        },
+        {
+          "key": "utm_campaign",
+          "value": "lancamento"
+        },
+        {
+          "key": "ref",
+          "value": "influencer_01"
+        }
+      ],
+      "size": null,
+      "timestamp": "2026-06-11T14:20:00.000Z",
+      "date": "2026-06-11T14:20:00.000Z",
+      "metadata": {
+        "browser": "Chrome",
+        "platform": "Android",
+        "screenSize": "360x800"
+      },
+      "tags": ["instagram", "influencer", "lancamento"],
+      "favorite": false,
+      "archived": false,
+      "count": 1,
+      "lastAccessed": "2026-06-11T14:20:00.000Z"
+    },
+    {
+      "id": "demo-005-encurtador",
+      "type": "encurtador",
+      "original": "https://www.amazon.com.br/produto-muito-longo-com-varios-parametros/dp/B0123456789/ref=sr_1_1",
+      "generated": "https://cur.to/amz-prod",
+      "shortCode": "amz-prod",
+      "params": [],
+      "size": null,
+      "timestamp": "2026-06-10T11:00:00.000Z",
+      "date": "2026-06-10T11:00:00.000Z",
+      "metadata": {
+        "browser": "Edge",
+        "platform": "Windows",
+        "screenSize": "1366x768"
+      },
+      "tags": ["amazon", "produto", "afiliado"],
+      "favorite": false,
+      "archived": true,
+      "count": 5,
+      "lastAccessed": "2026-06-13T18:30:00.000Z"
+    }
+  ],
+  "stats": {
+    "total": 5,
+    "byType": {
+      "gerador": 2,
+      "encurtador": 2,
+      "qrcode": 1
+    },
+    "favorites": 2,
+    "archived": 1,
+    "todayCount": 1,
+    "weekCount": 5,
+    "monthCount": 5,
+    "mostUsedType": "gerador",
+    "averagePerDay": 1.2,
+    "lastUpdated": "2026-06-14T12:00:00.000Z",
+    "storageSize": 2458,
+    "oldestItem": "2026-06-10T11:00:00.000Z",
+    "newestItem": "2026-06-14T10:30:00.000Z"
+  },
+  "tags": [
+    "afiliado",
+    "amazon",
+    "compartilhar",
+    "documento",
+    "facebook",
+    "influencer",
+    "instagram",
+    "lancamento",
+    "marketing",
+    "produto",
+    "promocao",
+    "qr",
+    "utm"
+  ],
+  "backup": {
+    "lastBackup": "2026-06-14T12:00:00.000Z",
+    "backupCount": 5,
+    "backupSize": 3072
+  },
+  "metadata": {
+    "appVersion": "3.0.0",
+    "dataFormat": "1.0",
+    "encoding": "UTF-8",
+    "language": "pt-BR",
+    "timezone": "America/Sao_Paulo"
+  }
+}

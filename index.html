@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#6C63FF">
+    <meta name="description" content="Ultra Gerador de Links - Crie, encurte e gere QR Codes de forma rápida e profissional">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Gerador Links">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" href="/assets/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="/assets/icons/icon-192.png">
+    <title>Ultra Gerador de Links Profissional v3.0</title>
+    <link rel="stylesheet" href="./styles/themes.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+</head>
+<body data-theme="dark">
+    <div id="app-container">
+        <header id="main-header">
+            <div id="header-top">
+                <h1>⚡ Ultra Gerador</h1>
+                <button id="theme-toggle" title="Alternar tema (Ctrl+K)">
+                    <span class="theme-icon-dark">🌙</span>
+                    <span class="theme-icon-light">☀️</span>
+                </button>
+            </div>
+            <nav id="main-nav">
+                <button id="btn-gerador" class="active" data-section="gerador">
+                    <span class="nav-icon">🔗</span>
+                    <span class="nav-text">Gerador</span>
+                </button>
+                <button id="btn-encurtador" data-section="encurtador">
+                    <span class="nav-icon">✂️</span>
+                    <span class="nav-text">Encurtador</span>
+                </button>
+                <button id="btn-qrcode" data-section="qrcode">
+                    <span class="nav-icon">📱</span>
+                    <span class="nav-text">QR Code</span>
+                </button>
+                <button id="btn-historico" data-section="historico">
+                    <span class="nav-icon">📋</span>
+                    <span class="nav-text">Histórico</span>
+                </button>
+            </nav>
+        </header>
+
+        <main id="content-area">
+            <section id="section-gerador" class="section active">
+                <div class="section-header">
+                    <h2>🔗 Gerador de Links com Parâmetros</h2>
+                    <p>Adicione parâmetros UTM e query strings personalizadas</p>
+                </div>
+                <div class="form-group">
+                    <label for="base-url">🌐 URL Base</label>
+                    <input type="url" id="base-url" placeholder="https://exemplo.com/pagina" autocomplete="off">
+                    <span class="input-help">Ex: https://meusite.com/landing-page</span>
+                </div>
+                <div id="params-container"></div>
+                <button id="add-param" class="btn-secondary">
+                    <span>➕</span> Adicionar Parâmetro
+                </button>
+                <button id="generate-link" class="btn-primary">
+                    <span>⚡</span> Gerar Link Completo
+                </button>
+                <div id="result-container" style="display:none;">
+                    <div class="form-group">
+                        <label for="generated-link">✅ Link Gerado</label>
+                        <div class="input-with-button">
+                            <input type="text" id="generated-link" readonly>
+                            <button id="copy-link" class="btn-copy">📋 Copiar</button>
+                        </div>
+                    </div>
+                    <div id="link-preview" class="preview-box"></div>
+                </div>
+            </section>
+
+            <section id="section-encurtador" class="section">
+                <div class="section-header">
+                    <h2>✂️ Encurtador de URLs</h2>
+                    <p>Transforme links longos em URLs curtas e fáceis de compartilhar</p>
+                </div>
+                <div class="form-group">
+                    <label for="long-url">🔗 URL Longa</label>
+                    <input type="url" id="long-url" placeholder="Cole sua URL extensa aqui..." autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <label for="custom-alias">🏷️ Alias Personalizado (opcional)</label>
+                    <input type="text" id="custom-alias" placeholder="meu-link-especial" maxlength="30" autocomplete="off">
+                    <span class="input-help">Use letras, números e hífens. Mínimo 3 caracteres.</span>
+                </div>
+                <button id="shorten-url" class="btn-primary">
+                    <span>✂️</span> Encurtar URL
+                </button>
+                <div id="short-result" style="display:none;">
+                    <div class="form-group">
+                        <label>✅ URL Encurtada</label>
+                        <div class="input-with-button">
+                            <input type="text" id="shortened-url" readonly>
+                            <button id="copy-short" class="btn-copy">📋 Copiar</button>
+                        </div>
+                    </div>
+                    <div class="stats-box">
+                        <div class="stat-item">
+                            <span class="stat-label">Original:</span>
+                            <span id="original-length">0</span> caracteres
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Encurtada:</span>
+                            <span id="short-length">0</span> caracteres
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Redução:</span>
+                            <span id="reduction-percent">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section-qrcode" class="section">
+                <div class="section-header">
+                    <h2>📱 Gerador de QR Code</h2>
+                    <p>Crie QR Codes personalizados para qualquer URL</p>
+                </div>
+                <div class="form-group">
+                    <label for="qr-url">🔗 URL para QR Code</label>
+                    <input type="url" id="qr-url" placeholder="https://exemplo.com" autocomplete="off">
+                </div>
+                <div class="qr-options">
+                    <div class="form-group">
+                        <label for="qr-size">📐 Tamanho</label>
+                        <select id="qr-size">
+                            <option value="200">Pequeno (200px)</option>
+                            <option value="300" selected>Médio (300px)</option>
+                            <option value="400">Grande (400px)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="qr-color">🎨 Cor</label>
+                        <input type="color" id="qr-color" value="#000000">
+                    </div>
+                </div>
+                <button id="generate-qr" class="btn-primary">
+                    <span>📱</span> Gerar QR Code
+                </button>
+                <div id="qrcode-container" style="display:none;">
+                    <div id="qrcode-display"></div>
+                    <button id="download-qr" class="btn-secondary">
+                        <span>💾</span> Baixar QR Code
+                    </button>
+                </div>
+            </section>
+
+            <section id="section-historico" class="section">
+                <div class="section-header">
+                    <h2>📋 Histórico de Links</h2>
+                    <p>Todos os seus links gerados ficam salvos aqui</p>
+                </div>
+                <div id="history-actions">
+                    <button id="export-history" class="btn-secondary">
+                        <span>📤</span> Exportar
+                    </button>
+                    <button id="clear-history" class="btn-danger">
+                        <span>🗑️</span> Limpar Tudo
+                    </button>
+                </div>
+                <div id="history-list"></div>
+            </section>
+        </main>
+
+        <footer id="main-footer">
+            <div class="footer-content">
+                <p>🚀 Ultra Gerador de Links v3.0</p>
+                <p class="footer-sub">Funciona Offline • Dados Locais • Sem Rastreamento</p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script src="./scripts/utils.js"></script>
+    <script src="./scripts/validator.js"></script>
+    <script src="./scripts/generator.js"></script>
+    <script src="./scripts/shortener.js"></script>
+    <script src="./scripts/qrcode.js"></script>
+    <script src="./scripts/history.js"></script>
+    <script src="./scripts/clipboard.js"></script>
+    <script src="./scripts/whatsapp.js"></script>>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
